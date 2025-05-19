@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerie - Résidence pour Retraités</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/galerie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo-jardins.png" alt="Les Jardins Taillon" class="logo-img">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#a-propos">À propos</a></li>
+                    <li><a href="index.html#commodites">Commodités</a></li>
+                    <li><a href="galerie.html" class="active">Galerie</a></li>
+                    <li><a href="appartements.html" class="active">Appartements</a></li>
+                    <li><a href="contact.html">Nous joindre</a></li>
+                </ul>
+                <div class="contact-info">
+                    <a href="tel:819-472-5430" class="btn btn-outline-small">819-472-5430</a>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Gallery Hero Section -->
+    <section class="gallery-hero">
+        <div class="hero-bg-image" style="background-image: url('assets/images/gallery/slider.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>GALERIE PHOTO</h1>
+                <p class="hero-description">Découvrez notre résidence à travers notre galerie d'images</p>
+            </div>
+        </div>
+    </section>
+    <a href="https://www.gestion1984.com/mediatask/dump/pdf/loi-25---texte---gestion-1984.pdf" target="_blank" id="loi25-button" class="loi25-button" aria-label="Información sobre Ley 25">
+        <img src="assets/images/logo_loi25.png" alt="Logo Ley 25">
+    </a>
+    <!-- Gallery Section -->
+    <section id="galerie" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Découvrez notre résidence</span>
+                <h2>NOTRE GALERIE</h2>
+                <div class="divider"></div>
+            </div>
+
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="appartements">Appartements</button>
+                <button class="filter-btn" data-filter="commodites">Commodités</button>
+                <button class="filter-btn" data-filter="exterieurs">Extérieurs</button>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Appartements -->
+                <div class="gallery-item" data-category="commodites">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_1.jpg" alt="Cour extérieure" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Cour extérieure </h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_1.jpg"
+                                    data-title="Cour extérieure">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="exterieurs">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_2.jpg" alt="Balcons" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Balcons</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_2.jpg"
+                                    data-title="Balcons">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commodités -->
+                <div class="gallery-item" data-category="exterieurs">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_3.jpg" alt="Vue extérieure de l'immeuble"
+                            loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Vue extérieure de l'immeuble</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_3.jpg"
+                                    data-title="Vue extérieure de l'immeuble">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="exterieurs">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_4.jpg" alt="Entrée vue de l'extérieur" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Entrée vue de l'extérieur</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_4.jpg"
+                                    data-title="Entrée vue de l'extérieur">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extérieurs -->
+                <div class="gallery-item" data-category="exterieurs">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_5.jpg" alt="Escaliers" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Escaliers</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_5.jpg"
+                                    data-title="Escaliers">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="commodites">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_6.jpg" alt="Cour extérieure" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Cour extérieure</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_6.jpg"
+                                    data-title="Cour extérieure">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="commodites">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_7.jpg" alt="Cour extérieure avec terrain de pétanque" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Cour extérieure avec terrain de pétanque</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_7.jpg"
+                                    data-title="Cour extérieure avec terrain de pétanque">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="appartements">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_8.jpg" alt="Salle de bain adaptée" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Salle de bain adaptée</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_8.jpg"
+                                    data-title="Salle de bain adaptée">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="appartements">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_9.jpg" alt="Salle de bain" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Salle de bain</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_9.jpg"
+                                    data-title="Salle de bain">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="appartements">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_10.jpg" alt="Chambre" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Chambre</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_10.jpg"
+                                    data-title="Chambre">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="appartements">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_11.jpg" alt="Cuisine" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Cuisine</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_11.jpg"
+                                    data-title="Cuisine">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="appartements">
+                    <div class="gallery-image">
+                        <img src="assets/images/gallery/gallery_12.jpg" alt="Chambre" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h3>Chambre</h3>
+                                <a href="#" class="gallery-view-btn" data-img="assets/images/gallery/gallery_12.jpg"
+                                    data-title="Chambre">
+                                    <i class="fas fa-search-plus"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Modal -->
+    <div class="gallery-modal">
+        <span class="gallery-modal-close">&times;</span>
+        <div class="gallery-modal-content">
+            <button class="gallery-modal-prev"><i class="fas fa-chevron-left"></i></button>
+            <img src="" alt="" class="gallery-modal-img">
+            <button class="gallery-modal-next"><i class="fas fa-chevron-right"></i></button>
+            <div class="gallery-modal-caption"></div>
+        </div>
+    </div>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>APPELEZ-NOUS POUR PLANIFIER UNE VISITE</h2>
+                <p>Découvrez votre futur chez-soi dans notre résidence accueillante</p>
+                <div class="cta-buttons">
+                    <a href="tel:819-472-5430" class="btn btn-light">APPELEZ MAINTENANT</a>
+                    <a href="contact.html" class="btn btn-outline">DEMANDER DES INFORMATIONS</a>
+                </div>
+            </div>
+            <div class="cta-image">
+                <img src="assets/images/gallery/9-1024x768.jpg" alt="Résidence" class="contact-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Les Jardins Taillon</h3>
+                    <p>680 Taillon, Drummondville, Qc</p>
+                    <p>819-472-5430</p>
+                    <p>www.jardinstaillon.com</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Liens Rapides</h3>
+                    <ul>
+                        <li><a href="#accueil">Accueil</a></li>
+                        <li><a href="#a-propos">À propos</a></li>
+                        <li><a href="#commodites">Commodités</a></li>
+                        <li><a href="galerie.html">Galerie</a></li>
+                        <li><a href="appartements.html" class="active">Appartements</a></li>
+                        <li><a href="contact.html">Nous joindre</a></li>
+                     
+                    </ul>
+                </div>
+                <div class="footer-apartments">
+                    <h3>Appartements</h3>
+                    <ul>
+                        <li>3½ - Pour personnes seules</li>
+                        <li>4½ - Idéal pour couples</li>
+                        <li>5½ - Spacieux et confortable</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Les Jardins Taillon | Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/galerie.js"></script>
+</body>
+
+</html>

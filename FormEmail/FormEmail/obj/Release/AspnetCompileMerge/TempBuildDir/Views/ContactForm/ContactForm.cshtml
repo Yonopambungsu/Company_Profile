@@ -1,0 +1,172 @@
+﻿@model FormEmail.Models.ContactForm
+@{
+    Layout = null;
+    ViewBag.Title = "Formulaire de contact";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <style>
+        :root {
+            --dark-green: #0a7740;
+            --hover-green: #056030;
+            --text-light: #ffffff;
+            --border-color: #ddd;
+            --background-color: #f8f9fa;
+            --form-background: #f9f9f9;
+            --text-color: #555;
+            --accent-color: #e69138;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--form-background);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--dark-green);
+            margin-top: 0;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--text-color);
+            font-weight: 500;
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            margin-bottom: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+            input:focus, textarea:focus, select:focus {
+                outline: none;
+                border-color: var(--dark-green);
+            }
+
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+
+        button {
+            width: 100%;
+            background-color: var(--dark-green);
+            color: var(--text-light);
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 8px; /* Coins arrondis comme dans l'image */
+            box-shadow: 0 4px 8px rgba(10, 119, 64, 0.2);
+            transition: background-color 0.3s, transform 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+            button:hover {
+                background-color: var(--hover-green);
+            }
+
+        .text-danger {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: -5px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .success-message {
+            color: var(--dark-green);
+            padding: 10px;
+            background-color: rgba(10, 119, 64, 0.1);
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <h2>Formulaire de contact</h2>
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.FullName)
+                @Html.TextBoxFor(m => m.FullName)
+                @Html.ValidationMessageFor(m => m.FullName, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email)
+                @Html.TextBoxFor(m => m.Email)
+                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Phone)
+                @Html.TextBoxFor(m => m.Phone)
+                @Html.ValidationMessageFor(m => m.Phone, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Subject)
+                @Html.DropDownListFor(m => m.Subject,
+                    new SelectList(
+                        new List<SelectListItem>
+                        {
+                            new SelectListItem { Text = "Sélectionnez une option", Value = "" },
+                            new SelectListItem { Text = "Demande d'information", Value = "information" },
+                            new SelectListItem { Text = "Planifier une visite", Value = "visite" },
+                            new SelectListItem { Text = "Vérifier la disponibilité", Value = "disponibilite" },
+                            new SelectListItem { Text = "Autre", Value = "autre" }
+                        }, "Value", "Text"),
+                    new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Subject, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.Message)
+                @Html.TextAreaFor(m => m.Message)
+                @Html.ValidationMessageFor(m => m.Message, "", new { @class = "text-danger" })
+            </div>
+
+            <button type="submit">Envoyer le message</button>
+        }
+
+        @if (ViewBag.Message != null)
+        {
+            <div class="success-message">@ViewBag.Message</div>
+        }
+    </div>
+</body>
+</html>
